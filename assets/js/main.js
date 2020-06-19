@@ -1,7 +1,7 @@
 const parentElement = document.querySelector('.kataList');
 
 //Loop to Create Kata Heading and Parapraph Elements
-for (let katasIndex = 1; katasIndex <= 18; katasIndex++) {
+for (let katasIndex = 1; katasIndex <= 23; katasIndex++) {
     const kataHeadingContainer = document.createElement('div'); //Create DIV container
     kataHeadingContainer.setAttribute('class', 'katasContainer'); //Set Class for DIV containers
     const kataHeading = document.createElement('h3'); //Create H3 header element
@@ -180,6 +180,72 @@ for (let indexKata18 = 0; indexKata18 < sampleArray.length; indexKata18++) {
 }
 const kataElement18 = document.querySelector('#kata18');
 kataElement18.append(largestElement)
+
+/* Start of Bonus Katas */
+
+//Function to draw rectangle
+function drawRectangle(height, width, color) {
+    const rectangle = document.createElement('div');
+    rectangle.setAttribute('style', 'background-color:' + color + '; ' + 'height:' + height + 'px; ' + 'width:' + width + 'px;');
+    return rectangle;
+}
+
+//KATA 19 - Bonus
+let kataResultContainer19 = document.createElement('div')
+for (let indexKata19 = 1; indexKata19 <= 20; indexKata19++) {
+    let newRectangle = drawRectangle(20, 100, 'gray');
+    kataResultContainer19.append(newRectangle);
+}
+const kataElement19 = document.querySelector('#kata19');
+kataElement19.append(kataResultContainer19)
+
+//KATA 20 - Bonus
+let kataResultContainer20 = document.createElement('div')
+for (let indexKata20 = 105; indexKata20 <= 200; indexKata20 += 5) {
+    let newRectangle = drawRectangle(20, indexKata20, 'gray');
+    kataResultContainer20.append(newRectangle);
+}
+const kataElement20 = document.querySelector('#kata20');
+kataElement20.append(kataResultContainer20)
+
+//KATA 21 - Bonus
+let kataResultContainer21 = document.createElement('div')
+for (let indexKata21 = 0; indexKata21 < sampleArray.length; indexKata21++) {
+    let newRectangle = drawRectangle(20, sampleArray[indexKata21], 'gray');
+    kataResultContainer21.append(newRectangle);
+}
+const kataElement21 = document.querySelector('#kata21');
+kataElement21.append(kataResultContainer21)
+
+//KATA 22 - Bonus
+let kataResultContainer22 = document.createElement('div')
+for (let indexKata22 = 0; indexKata22 < sampleArray.length; indexKata22++) {
+    let newRectangle // = drawRectangle(20, sampleArray[indexKata22], 'gray');
+    if (indexKata22 % 2 === 0) {
+        newRectangle = drawRectangle(20, sampleArray[indexKata22], 'gray');
+    } else {
+        newRectangle = drawRectangle(20, sampleArray[indexKata22], 'red');
+    }
+    kataResultContainer22.append(newRectangle);
+}
+const kataElement22 = document.querySelector('#kata22');
+kataElement22.append(kataResultContainer22)
+
+//KATA 23 - Bonus
+let kataResultContainer23 = document.createElement('div')
+for (let indexKata23 = 0; indexKata23 < sampleArray.length; indexKata23++) {
+    let newRectangle // = drawRectangle(20, sampleArray[indexKata22], 'gray');
+    if (sampleArray[indexKata23] % 2 === 0) {
+        newRectangle = drawRectangle(20, sampleArray[indexKata23], 'red');
+    } else {
+        newRectangle = drawRectangle(20, sampleArray[indexKata23], 'gray');
+    }
+    kataResultContainer23.append(newRectangle);
+}
+const kataElement23 = document.querySelector('#kata23');
+kataElement23.append(kataResultContainer23)
+
+/* End of Bonus Katas */
 
 /* 
 Credits
